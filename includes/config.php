@@ -1,12 +1,12 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'cinemax_db');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: 'cinemax_db');
 
 // Website configuration
-define('SITE_URL', 'http://localhost/cinemax');
+define('SITE_URL', getenv('SITE_URL') ?: 'http://localhost/cinemax');
 define('UPLOAD_DIR', 'assets/uploads/');
 
 // Start session
